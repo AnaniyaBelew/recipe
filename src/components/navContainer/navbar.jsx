@@ -1,19 +1,28 @@
+import { Fragment } from "react";
 import "./navbar.component.css"
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 const NavBarContainer=()=>
 {
     return(
-        <div className="App">
+        <Fragment>
             <div className="Nav_container">
                 <div className="header_nav">
-                    Navigation
+                    <div className="routes">
+                        <Link to='/'>Home</Link>
+                        <Link to='/recipe'>Recipe</Link>
+                        <Link to='/feauters'>Feauters</Link>
+                        <Link to='/Hotline'>Hotline</Link>
+                    </div>
+                    <div className="auth_nav">
+                        <Link to='/login'>Login</Link>
+                        <Link to='/signup'>Signup</Link>
+                    </div>
                 </div>
-                <div className="header_content">
-                        Content
-                </div>
+                <div className="header_content"></div>
+                
             </div>
             <Outlet/>
-        </div>
+        </Fragment>
     )
 }
 export default NavBarContainer;
