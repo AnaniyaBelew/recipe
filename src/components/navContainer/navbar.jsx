@@ -1,10 +1,18 @@
 import "./navbar.component.css"
-import Navbar from "../NavBar/Nav";
+import { Outlet } from "react-router-dom";
 const NavBarContainer=()=>
 {
     return(
-        <div className="Nav_container">
-            <Navbar/>
+        <div className="App">
+            <div className="Nav_container">
+                <div className="header_nav">
+                    Navigation
+                </div>
+                <div className="header_content">
+                        Content
+                </div>
+            </div>
+            <Outlet/>
         </div>
     )
 }
